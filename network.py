@@ -11,8 +11,8 @@ img_size = 256
 batch_size = 32
 model_name = "{}.h5".format(input("Model name: "))
 
-train_data = np.load('train_data_{}_contrast.npy'.format(img_size), allow_pickle=True)
-test_data = np.load('test_data_{}_contrast.npy'.format(img_size), allow_pickle=True)
+train_data = np.load('train_data_{}.npy'.format(img_size), allow_pickle=True)
+test_data = np.load('test_data_{}.npy'.format(img_size), allow_pickle=True)
 
 model = models.Sequential()
 model.add(layers.Conv2D(128, (3, 3), activation='relu', input_shape=(img_size, img_size, 1)))
